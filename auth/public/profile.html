@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifica Profilo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Modifica il tuo Profilo</h1>
+        <form id="profileForm">
+            <div>
+                <label for="username">Nome Utente</label>
+                <input type="text" id="username" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div>
+                <label for="password">Nuova Password</label>
+                <input type="password" id="password">
+            </div>
+            <div>
+                <label for="musicPreferences">Preferenze Musicali</label>
+                <input type="text" id="musicPreferences">
+            </div>
+            <div>
+                <label for="favoriteBands">Gruppi Musicali Preferiti</label>
+                <input type="text" id="favoriteBands">
+            </div>
+            <button type="submit">Salva Modifiche</button>
+        </form>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le mie Playlist</title>
+    <link rel="stylesheet" href="css/styleshare.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button id="backToDashboard">Torna a Dashboard</button>
+            <!-- Form per creare una nuova playlist -->
+            <form id="createPlaylistForm">
+            </form>
+
+            <!-- Barra di ricerca per playlist pubbliche -->
+            <form id="searchPublicPlaylistsForm">
+            </form>
+
+            <!-- Elenco delle playlist dell'utente -->
+            <h3>Le tue Playlist</h3>
+            <ul id="userPlaylists"></ul> <!-- Qui verranno mostrate le playlist dell'utente -->
+        </div>
+
+        <!-- Sezione principale per i dettagli -->
+        <div class="main-content">
+            <div id="playlistDetails">
+                <h2>Dettagli Playlist</h2>
+                <div id="playlistInfo">
+                    <!-- Dettagli delle playlist -->
+                </div>
+                <!-- <button id="editPlaylist" style="display:none;">Modifica Playlist</button>
+                <button id="deletePlaylist" style="display:none;">Cancella Playlist</button> -->
+            </div>
+
+            <!-- Sezione per i risultati della ricerca -->
+            <div id="searchResults" style="display:none;">
+                <h2>Risultati della Ricerca</h2>
+                <ul id="publicPlaylists"></ul> <!-- Qui verranno mostrati i risultati della ricerca -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/share.js"></script>
+</body>
+
+</html>

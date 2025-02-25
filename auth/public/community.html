@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Comunità Musicali</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button id="communityBtn">
+            <a href="dashboard.html">dashboard</a>
+        </button>
+        
+        <h1>Gestione Comunità Musicali</h1>
+
+        <!-- Sezione per creare una nuova comunità -->
+        <div>
+            <h2>Crea una nuova comunità</h2>
+            <form id="createCommunityForm">
+                <input type="text" id="communityName" placeholder="Nome della comunità" required>
+                <select id="addMembers" multiple required>
+                    <!-- Qui verranno mostrati gli utenti della piattaforma -->
+                </select>
+                <button type="submit">Crea Comunità</button>
+            </form>
+        </div>
+
+        <!-- Sezione per visualizzare le comunità esistenti e condividere playlist -->
+        <div>
+            <h2>Le tue comunità</h2>
+            <ul id="communityList"></ul> <!-- Mostra le comunità create dall'utente -->
+
+            <!-- Dettagli della comunità selezionata -->
+            <div id="communityDetails" style="display: none;">
+                <h3>Dettagli Comunità</h3>
+                <ul id="communityMembers"></ul> <!-- Elenco membri -->
+                <h4>Condividi Playlist</h4>
+                <select id="playlistSelect"></select> <!-- Seleziona la playlist da condividere -->
+                <button id="sharePlaylistBtn">Condividi con la Comunità</button>
+                <button id="leaveCommunityBtn">Esci dalla Comunità</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/community.js"></script>
+</body>
+</html>

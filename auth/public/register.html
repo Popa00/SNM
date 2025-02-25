@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <title>Register</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Registrati</a>
+  </div>
+
+  <div class="container">
+    <h1>Registrati</h1>
+    <form id="registerForm">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <label for="musicPreferences">Preferenze Musicali</label>
+        <input type="text" id="musicPreferences" placeholder="Es: Pop, Rock, Jazz">
+      </div>
+      <div>
+        <label for="favoriteBands">Gruppi Musicali Preferiti</label>
+        <input type="text" id="favoriteBands" placeholder="Es: Beatles, Queen">
+      </div>
+      <button type="submit">Registrati</button>
+    </form>
+  </div>
+  <script src="js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="share.html">Le mie Playlist</a>
+        <a href="community.html">La mia community</a>
+        <button id="editProfileBtn">Modifica profilo</button>
+        <button id="logoutBtn">Logout</button>
+        <button id="deleteAccountBtn">Elimina profilo</button>
+    </div>
+
+    <!-- Container principale per la Dashboard -->
+    <div class="dashboard-container">
+        <div class="search-container">
+            <div class="search-group">
+                <div class="search-box">
+                    <h2>Ricerca Canzoni</h2>
+                    <form id="searchSongForm">
+                        <input type="text" id="searchInput" placeholder="Cerca una canzone su Spotify" />
+                        <button id="searchBtn" class="cta-button">Cerca</button>
+                    </form>
+                </div>
+
+                <div class="search-box">
+                    <h2>Ricerca Playlist Pubbliche</h2>
+                    <form id="searchPublicPlaylistForm">
+                        <input type="text" id="searchPlaylistQuery" placeholder="Inserisci tag o nome canzone..."
+                            required>
+                        <button type="submit" class="cta-button">Cerca</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div id="publicPlaylistResults"></div> <!-- Qui compariranno le playlist pubbliche trovate -->
+
+            <!-- Risultati della ricerca -->
+            <div id="searchResults"></div>
+        </div>
+
+
+        <!-- Bottone per creare una nuova playlist -->
+        <button id="createPlaylistBtn" class="cta-button">Crea Nuova Playlist</button>
+
+        <!-- Contenitore per visualizzare le playlist -->
+        <div id="playlistContainer">
+            <!-- Le playlist verranno caricate dinamicamente qui -->
+            <ul id="playlists"></ul>
+        </div>
+    </div>
+
+    <!-- Modale di Modifica e Creazione Playlist -->
+    <div id="editModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Modifica Playlist</h2>
+            <label for="editPlaylistName">Nome Playlist</label>
+            <input type="text" id="editPlaylistName" placeholder="Inserisci il nome della playlist">
+
+            <label for="editPlaylistDescription">Descrizione</label>
+            <textarea id="editPlaylistDescription" placeholder="Inserisci la descrizione"></textarea>
+
+            <label for="editPlaylistTag">Tag</label>
+            <textarea id="editPlaylistTag" placeholder="Inserisci uno o più #tag"></textarea>
+
+            <button id="saveChangesBtn">Salva Modifiche</button>
+            <button onclick="document.getElementById('editModal').style.display='none'">Annulla</button>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
